@@ -26,7 +26,7 @@ public class JDBC {
 		LOG.info(con);
 	    
 		return con;
-}	
+    }	
 
 	public static void select(Connection con, String USRIDX ) throws ClassNotFoundException { 
 	

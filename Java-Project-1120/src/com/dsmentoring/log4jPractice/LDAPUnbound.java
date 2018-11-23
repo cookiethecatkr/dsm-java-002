@@ -22,8 +22,7 @@ public class LDAPUnbound {
 	    
 	public static void searchSDK(String filter, LDAPConnection ldap) throws LDAPException {
 			
-		SearchRequest searchRequest = new SearchRequest("c=kr",SearchScope.SUB,filter);
-		SearchResult searchResult = ldap.search(searchRequest);
+		SearchResult searchResult = ldap.search("c=kr",SearchScope.SUB,filter);
 		LOG.info(searchResult);
 		LOG.info(searchResult.getEntryCount());
 		LOG.info(searchResult.getSearchEntries());
@@ -38,7 +37,7 @@ public class LDAPUnbound {
 	public static void main(String[] args) throws LDAPException {
 		
 		LDAPConnection ldap = connectSDK("192.168.0.60",389,"cn=govmanager","GOVmoi!manager");
-		searchSDK("cn=007이진형001",ldap);
+		searchSDK("cn=lee",ldap);
 		closeSDK(ldap);
 	}	
 } 
