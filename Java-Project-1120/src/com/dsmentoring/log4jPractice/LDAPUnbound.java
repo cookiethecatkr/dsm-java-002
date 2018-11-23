@@ -25,6 +25,8 @@ public class LDAPUnbound {
 		SearchRequest searchRequest = new SearchRequest("c=kr",SearchScope.SUB,filter);
 		SearchResult searchResult = ldap.search(searchRequest);
 		LOG.info(searchResult);
+		LOG.info(searchResult.getEntryCount());
+		LOG.info(searchResult.getSearchEntries());
 	}
 
 	public static void closeSDK(LDAPConnection ldap) {
