@@ -36,7 +36,7 @@ public class LDAPUnbound {
 	
 	public static void main(String[] args) throws LDAPException {
 		
-		LDAPConnection ldap = connectSDK("192.168.0.60",389,"cn=govmanager","GOVmoi!manager");
+		LDAPConnection ldap = connectSDK("192.168.0.60",389,"1r","2r");
 		searchSDK("cn=lee",ldap);
 		closeSDK(ldap);
 	}	
